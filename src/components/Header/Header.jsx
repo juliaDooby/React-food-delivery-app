@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import { Container } from 'reactstrap';
 import logo from '../../assets/images/res-logo.png';
-import { Navlink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import '../../styles/header.css';
 
@@ -40,13 +40,13 @@ const Header = () => {
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5">
               {nav__links.map((item, index) => (
-                <Navlink
+                <NavLink
                   to={item.path}
                   key={index}
                   className={(navClass) => (navClass.isActive ? 'active__menu' : '')}
                 >
                   {item.display}
-                </Navlink>
+                </NavLink>
               ))}
             </div>
           </div>
