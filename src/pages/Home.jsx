@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Helmet from '../components/Helmet/Helmet.js';
 import { Container, Row, Col } from 'reactstrap';
@@ -20,6 +20,8 @@ import foodCategoryImg01 from '../assets/images/hamburger.png';
 import foodCategoryImg02 from '../assets/images/pizza.png';
 import foodCategoryImg03 from '../assets/images/bread.png';
 
+import ProductCard from '../components/UI/product-card/ProductCard.jsx';
+
 const featuredata = [
   {
     title: 'Quick Delivery',
@@ -39,6 +41,31 @@ const featuredata = [
 ];
 
 const Home = () => {
+  const [category, setCategory] = useState('ALL');
+  const [allProducts, setAllProducts] = useState(products);
+
+  useEffect(() => {
+    if (category === 'ALL') {
+      setAllProducts(products);
+    }
+
+    if (category === 'BURGER') {
+      const filteredProducts = products.filter((item) => item.category === 'Burger');
+
+      setAllProducts(filteredProducts);
+    }
+    if (category === 'PIZZA') {
+      const filteredProducts = products.filter((item) => item.category === 'Pizza');
+
+      setAllProducts(filteredProducts);
+    }
+    if (category === 'BREAD') {
+      const filteredProducts = products.filter((item) => item.category === 'Bread');
+
+      setAllProducts(filteredProducts);
+    }
+  }, [category]);
+2.00.00
   return (
     <Helmet title="Home">
       <section>
@@ -134,7 +161,6 @@ const Home = () => {
             <Col lg="12" className="text-center">
               <h2>Popular Foods</h2>
             </Col>
-
             <Col lg="12">
               <div className="food__category d-flex align-items-center justify-content-center gap-4">
                 <button className="all__btn foodBtnActive">All</button>
@@ -154,6 +180,11 @@ const Home = () => {
                 </button>
               </div>
             </Col>
+            {products.map((item) => (
+              <Col lg="3" md="4" key={item.id} className="mt-5">
+                <ProductCard item={item} />
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
