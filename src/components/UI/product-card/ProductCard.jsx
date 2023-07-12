@@ -1,6 +1,8 @@
 import React from 'react';
 
-import productImg from '../../../assets/images/product_02.1.jpg';
+import productImg from '../../../assets/images/product_2.1.jpg';
+
+import { Link } from 'react-router-dom';
 
 const ProductCard = () => {
   return (
@@ -9,7 +11,15 @@ const ProductCard = () => {
         <img src={productImg} alt="product-img" />
       </div>
 
-      <div className="product__content">1.37.36</div>
+      <div className="product__content">
+        <h5>
+          <Link> Burger</Link>
+        </h5>
+        <div>
+          <span className="product__price">$24.00</span>
+          <button className="addTOCart__btn">Add to Cart</button>
+        </div>
+      </div>
     </div>
   );
 };
