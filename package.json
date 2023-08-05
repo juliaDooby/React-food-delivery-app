@@ -19,9 +19,11 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.29.0",
     "reactstrap": "^9.0.1",
     "redux-logger": "^3.0.6",
     "remixicon": "^2.5.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -49,13 +51,17 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/core": "7.22.5",
     "@babel/eslint-parser": "7.22.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "7.22.5"
   },
   "plugins": [
-    ["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+    [
+      "@babel/plugin-proposal-private-property-in-object",
+      {
+        "loose": true
+      }
+    ]
   ]
 }
-

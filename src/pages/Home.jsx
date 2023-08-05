@@ -24,6 +24,10 @@ import ProductCard from '../components/UI/product-card/ProductCard.jsx';
 
 import whyImg from '../assets/images/location.png';
 
+import netWorkImg from '../assets/images/network.png';
+
+import TestimonialSlider from '../components/UI/slider/TestimonialSlider.jsx';
+
 const featureData = [
   {
     title: 'Quick Delivery',
@@ -45,6 +49,14 @@ const featureData = [
 const Home = () => {
   const [category, setCategory] = useState('ALL');
   const [allProducts, setAllProducts] = useState(products);
+
+  const [hotPizza, setHotPizza] = useState([]);
+
+  useEffect(() => {
+    const filteredPizza = products.filter((item) => item.category === 'Pizza');
+    const slicePizza = filteredPizza.slice(0, 4);
+    setHotPizza(slicePizza);
+  }, []);
 
   useEffect(() => {
     if (category === 'ALL') {
@@ -259,8 +271,46 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      <section className="pt-0">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <h2>Hot Pizza</h2>
+            </Col>
+            {hotPizza.map((item) => (
+              <Col lg="3" md="4" key={item.id}>
+                <ProductCard item={item} />
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="6" md="6">
+              <div className="testimonial">
+                <h5 className="testimonial__subtitle mb=4">Testimonial</h5>
+                <h2 className="testimonial__title mb=4">
+                  What our<span>customers</span>are saying
+                </h2>
+                <p className="testimonial__desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus
+                  aperiam consequatur distinctio tempora facere optio commodi soluta, eos itaque.
+                </p>
+                <TestimonialSlider />
+              </div>
+            </Col>
+            <Col lg="6" md="6">
+              <img src={netWorkImg} alt="testimonial-img" className="w-100" />
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   );
 };
-
+// 2.19;
 export default Home;
