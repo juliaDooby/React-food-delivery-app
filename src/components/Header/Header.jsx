@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import { Container } from 'reactstrap';
 import logo from '../../assets/images/res-logo.png';
 import { NavLink, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import '../../styles/header.css';
 
@@ -27,9 +28,25 @@ const nav__links = [
 
 const Header = () => {
   const menuRef = useRef(null);
+  const headerRef = useRef(null);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
   const toggleMenu = () => menuRef.current.classList.toggle('show__menu');
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        headerRef.current.classList.add('header__shrink');
+      } else {
+        headerRef.current.classList.remove('header__shrink');
+      }
+    });
+
+    return () => window.removeEventListener('scroll');
+  }, []);
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <Container>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
           <div className="logo">
@@ -54,7 +71,7 @@ const Header = () => {
           <div className="nav__right d-flex align-items-center gap-4">
             <span className="cart__icon">
               <i class="ri-shopping-basket-line"></i>
-              <span className="cart__badge">2</span>
+              <span className="cart__badge">{totalQuantity}</span>
             </span>
             <span className="user">
               <Link to="/login">
