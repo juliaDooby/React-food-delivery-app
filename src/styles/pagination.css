@@ -1,11 +1,11 @@
-/* .paginationBttns {
+.paginationBttns {
   width: 80%;
   height: 40px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 0.5rem;
+  column-gap: .5rem;
   list-style: none;
   margin-top: 30px;
 }
@@ -25,5 +25,3 @@
 .paginationBttns a:hover {
   background: #df2020;
 }
-
-*/
