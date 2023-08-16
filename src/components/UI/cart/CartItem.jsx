@@ -1,5 +1,5 @@
 import React from 'react';
-import { LIstGroupItem } from 'reactstrap';
+import { ListGroupItem } from 'reactstrap';
 
 import '../../../styles/cart-item.css';
 
@@ -15,10 +15,9 @@ const CartItem = ({ item }) => {
   };
   const decreaseItem = () => {
     dispatch(cartActions.removeItem(id));
-
-    const deleteItem = () => {
-      dispatch(cartActions.deleteItem(id));
-    };
+  };
+  const deleteItem = () => {
+    dispatch(cartActions.deleteItem(id));
   };
   return (
     <ListGroupItem className="border-0 cart__item">
