@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Helmet from '../components/Helmet/Helmet';
 import CommonSection from '../components/UI/common-section/CommonSection';
 
@@ -17,8 +17,14 @@ const AllFoods = () => {
   const [pageNumber, setPageNumber] = useState(0);
 
   const searchedProduct = products.filter((item) => {
-    if (searchTerm.value === '') return item;
-    if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) return item;
+    if (searchTerm.value === '') {
+      return item;
+    }
+    if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return item;
+    } else {
+      return console.log('not found');
+    }
   });
 
   const productPerPage = 12;

@@ -227,7 +227,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="6" md="6">
-              <img src="{whyImg}" alt="why-tasty-treat" className="w-100" />
+              <img src={whyImg} alt="why-tasty-treat" className="w-100" />
             </Col>
             <Col lg="6" md="6">
               <div className="why-tasty-treat">
@@ -312,5 +312,4 @@ const Home = () => {
     </Helmet>
   );
 };
-// 2.19;
 export default Home;

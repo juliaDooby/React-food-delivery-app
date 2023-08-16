@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Checkout = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Checkout
+export default Checkout;

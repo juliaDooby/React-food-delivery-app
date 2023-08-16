@@ -7,7 +7,7 @@ import CommonSection from '../components/UI/common-section/CommonSection';
 import { Container, Row, Col } from 'reactstrap';
 
 import { useDispatch } from 'react-redux';
-import { cartActions } from 'store/shopping-cart/cartSlice';
+import { cartActions } from '../store/shopping-cart/cartSlice';
 
 import '../styles/product-details.css';
 
@@ -33,6 +33,7 @@ const FoodDetails = () => {
   const submitHandler = (e) => {
     e.preventDefault();
   };
+  console.log(enteredName, enteredEmail, reviewMsg);
 
   useEffect(() => {
     setPreviewImg(product.image01);

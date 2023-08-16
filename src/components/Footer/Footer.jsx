@@ -77,9 +77,9 @@ const Footer = () => {
                 <i class="ri-send-plane-line"></i>
               </span>
               <span>
-                <link to="https://github.com/muhib160">
+                <Link to="https://github.com/muhib160">
                   <i class="ri-github-line"></i>
-                </link>
+                </Link>
               </span>
               <span>
                 <Link to="https://www.youtube.com/c/MuhibsTechDiary">
@@ -100,4 +100,3 @@ const Footer = () => {
 };
 
 export default Footer;
-// 2/52
