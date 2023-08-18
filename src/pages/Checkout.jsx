@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import CommonSection from '../components/UI/common-selection/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
 
+import '../styles/checkout.css';
+
 const Checkout = () => {
+  const [enterName, setEnterName] = useState('');
+  const [enterEmail, setEnterEmail] = useState('');
+  const [enterNumber, setEnterNumber] = useState('');
+  const [enterCountry, setEnterCountry] = useState('');
+  const [enterCity, setEnterCity] = useState('');
+  const [postalCode, setPostalCode] = useState('');
+  const [shippingInfo, setShippingInfo] = useState([]);
+
+  const shippingInfo = [];
+  const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
+  const shippingCost = 30;
+
+  const totalAmount = cartTotalAmount + number(shippingCost);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const userShippingAdress = {
+      name: enterName,
+      email: enterEmail,
+      phone: enterNumber,
+      country: enterCountry,
+      city: enterCity,
+      postalCode: postalCode,
+    };
+    shippingInfo.push(userShippingAdress);
+    console.group(shippingInfo);
+  };
+
   return (
     <Helmet title="Checkout">
       <CommonSection title="Checkout" />
@@ -13,26 +43,73 @@ const Checkout = () => {
           <Row>
             <Col lg="8" md="6">
               <h6 className="mb-4">Shipping Adress</h6>
-              <form className="checkout__form">
+              <form className="checkout__form" onSubmit={submitHandler}>
                 <div className="form__group">
-                  <input type="text" placeholder="Enter your name" />
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                    onChange={(e) => setEnterName(e.target.value)}
+                  />
                 </div>
                 <div className="form__group">
-                  <input type="number" placeholder="Phone number" />
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                    onChange={(e) => setEnterEmail(e.target.value)}
+                  />
                 </div>
                 <div className="form__group">
-                  <input type="text" placeholder="Country" />
+                  <input
+                    type="number"
+                    placeholder="Phone number"
+                    required
+                    onChange={(e) => setEnterNumber(e.target.value)}
+                  />
                 </div>
                 <div className="form__group">
-                  <input type="text" placeholder="City" />
+                  <input
+                    type="text"
+                    placeholder="Country"
+                    required
+                    onChange={(e) => setEnterCountry(e.target.value)}
+                  />
                 </div>
-                28.07!
                 <div className="form__group">
-                  <input type="number" placeholder="Postal code" />
+                  <input
+                    type="text"
+                    placeholder="City"
+                    required
+                    onChange={(e) => setEnterCity(e.target.value)}
+                  />
                 </div>
+                <div className="form__group">
+                  <input
+                    type="number"
+                    placeholder="Postal code"
+                    required
+                    onChange={(e) => setPostalCode(e.target.value)}
+                  />
+                </div>
+                <button className="addTOCart__btn">Payment</button>
               </form>
             </Col>
-            <Col lg="4" md="6"></Col>
+            <Col lg="4" md="6">
+              <div className="checkout__bill">
+                <h6 className="d-flex align-items-center justify-content-between mb-3">
+                  Subtotal: <span>${cartTotalAmount}</span>
+                </h6>
+                <h6 className="d-flex align-items-center justify-content-between mb-3">
+                  Shipping: <span>${shippingCost}</span>
+                </h6>
+                <div className="checkout__total">
+                  <h6 className="d-flex align-items-center justify-content-between">
+                    Total: <span>${totalAmount}</span>
+                  </h6>
+                </div>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>

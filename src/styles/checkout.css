@@ -1,24 +1,9 @@
-/* .checkoutMessage {
-  width: fit-content;
-  margin: 1rem auto;
+.checkout__bill {
+  background: #fde4e4;
+  padding: 30px;
 }
 
-.checkoutIcon {
-  width: 2rem;
-  color: #4bb543;
-  height: 2rem;
+.checkout__total {
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
 }
-
-.checkoutTitleContainer {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 0.7rem;
-}
-
-@media only screen and (max-width: 480px) {
-  .checkoutMessage {
-    margin: 1rem 1rem;
-  }
-}
-
-*/
