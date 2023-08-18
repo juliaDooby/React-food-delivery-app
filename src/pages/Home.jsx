@@ -101,9 +101,10 @@ const Home = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolorum amet
                     illo voluptas, accusamus soluta!
                   </p>
+
                   <div className="hero__btns d-flex align-items-center gap-5 mt-4">
                     <button clasName="order__btn d-flex align-items-center justify-content-between">
-                      Order now<i class="ri-arrow-right-s-line"></i>
+                      Order nowv
                     </button>
                     <button className="all__foods-btn">
                       <Link to="/foods">See all foods</Link>

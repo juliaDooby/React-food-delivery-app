@@ -1,0 +1,24 @@
+.th {
+        text-align: center;
+}
+
+.cart__image-box {
+        width: 80px;
+}
+
+.cart__image-box img {
+        width: 100%;
+}
+
+.cart__item-del i {
+        cursor: pointer;
+}
+
+.cart__page-btn button a:hover {
+        color: #fff;
+}
+
+.cart__subtotal {
+        color: #df2020;
+        font-size: 1.5rem;
+}
