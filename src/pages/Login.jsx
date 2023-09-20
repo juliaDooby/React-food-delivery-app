@@ -23,7 +23,6 @@ const Login = () => {
                 <div className="form__group">
                   <input type="email" placeholder="Email" required ref={loginNameRef} />
                 </div>
-
                 <div className="form__group">
                   <input type="password" placeholder="Password" required ref={loginPasswordRef} />
                 </div>

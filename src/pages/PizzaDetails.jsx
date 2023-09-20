@@ -115,7 +115,6 @@ const PizzaDetails = () => {
               <div className="single__product-content">
                 <h2 className="product__title mb-3">{title}</h2>
                 <p className="product__price">
-                  {' '}
                   Price: <span>${price}</span>
                 </p>
                 <p className="category mb-5">

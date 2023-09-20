@@ -24,11 +24,9 @@ const Register = () => {
                 <div className="form__group">
                   <input type="text" placeholder="Full name" required ref={signupNameRef} />
                 </div>
-
                 <div className="form__group">
                   <input type="email" placeholder="Email" required ref={signupEmailRef} />
                 </div>
-
                 <div className="form__group">
                   <input type="password" placeholder="Password" required ref={signupPasswordRef} />
                 </div>

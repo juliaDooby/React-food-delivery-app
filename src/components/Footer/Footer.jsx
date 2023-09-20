@@ -67,16 +67,17 @@ const Footer = () => {
 
         <Row className="mt-5">
           <Col lg="6" md="6">
-            <p className="copyright__text"></p>
+            <p className="copyright__text">
+              Copyright - 2022, website made by Muhibur Rahman. All Rights Reserved.
+            </p>
           </Col>
           <Col lg="6" md="6">
             <div className="social__links d-flex align-items-center gap-4 justify-content-end">
-              <p clasName="m-0">Follow: </p>
+              <p className="m-0">Follow: </p>
               <span>
-                {' '}
                 <Link to="https://www.facebook.com/muhib160">
                   <i class="ri-facebook-line"></i>
-                </Link>{' '}
+                </Link>
               </span>
 
               <span>
@@ -86,17 +87,15 @@ const Footer = () => {
               </span>
 
               <span>
-                {' '}
                 <Link to="https://www.youtube.com/c/MuhibsTechDiary">
                   <i class="ri-youtube-line"></i>
-                </Link>{' '}
+                </Link>
               </span>
 
               <span>
-                {' '}
                 <Link to="https://www.linkedin.com/in/muhib160/">
                   <i class="ri-linkedin-line"></i>
-                </Link>{' '}
+                </Link>
               </span>
             </div>
           </Col>

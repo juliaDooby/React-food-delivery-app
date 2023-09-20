@@ -8,4 +8,5 @@ const store = configureStore({
     cartUi: cartUiSlice.reducer,
   },
 });
+
 export default store;
