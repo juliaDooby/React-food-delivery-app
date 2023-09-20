@@ -31,6 +31,9 @@
     "webpack": "^4.44.2"
   },
   "scripts": {
+    "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -60,6 +63,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "7.22.5",
     "babel-plugin-react-html-attrs": "^3.0.5",
+    "gh-pages": "^6.0.0",
     "react-error-overlay": "^6.0.9",
     "sass": "^1.65.1",
     "sass-loader": "^13.3.2",
@@ -74,4 +78,3 @@
     ]
   ]
 }
-
