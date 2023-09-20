@@ -81,7 +81,7 @@ const AllFoods = () => {
                 onPageChange={changePage}
                 previousLabel={'Prev'}
                 nextLabel={'Next'}
-                containerClassname="paginationBttns"
+                containerClassname=" paginationBttns "
               />
             </div>
           </Row>
