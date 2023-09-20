@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
-import CommonSection from '../components/UI/common-selection/CommonSection';
+import CommonSection from '../components/UI/common-section/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
 
 import '../styles/checkout.css';
@@ -13,17 +13,16 @@ const Checkout = () => {
   const [enterCountry, setEnterCountry] = useState('');
   const [enterCity, setEnterCity] = useState('');
   const [postalCode, setPostalCode] = useState('');
-  const [shippingInfo, setShippingInfo] = useState([]);
 
   const shippingInfo = [];
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
   const shippingCost = 30;
 
-  const totalAmount = cartTotalAmount + number(shippingCost);
+  const totalAmount = cartTotalAmount + Number(shippingCost);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const userShippingAdress = {
+    const userShippingAddress = {
       name: enterName,
       email: enterEmail,
       phone: enterNumber,
@@ -31,8 +30,9 @@ const Checkout = () => {
       city: enterCity,
       postalCode: postalCode,
     };
-    shippingInfo.push(userShippingAdress);
-    console.group(shippingInfo);
+
+    shippingInfo.push(userShippingAddress);
+    console.log(shippingInfo);
   };
 
   return (
@@ -42,7 +42,7 @@ const Checkout = () => {
         <Container>
           <Row>
             <Col lg="8" md="6">
-              <h6 className="mb-4">Shipping Adress</h6>
+              <h6 className="mb-4">Shipping Address</h6>
               <form className="checkout__form" onSubmit={submitHandler}>
                 <div className="form__group">
                   <input
@@ -52,6 +52,7 @@ const Checkout = () => {
                     onChange={(e) => setEnterName(e.target.value)}
                   />
                 </div>
+
                 <div className="form__group">
                   <input
                     type="email"
@@ -92,9 +93,12 @@ const Checkout = () => {
                     onChange={(e) => setPostalCode(e.target.value)}
                   />
                 </div>
-                <button className="addTOCart__btn">Payment</button>
+                <button type="submit" className="addTOCart__btn">
+                  Payment
+                </button>
               </form>
             </Col>
+
             <Col lg="4" md="6">
               <div className="checkout__bill">
                 <h6 className="d-flex align-items-center justify-content-between mb-3">
@@ -104,9 +108,9 @@ const Checkout = () => {
                   Shipping: <span>${shippingCost}</span>
                 </h6>
                 <div className="checkout__total">
-                  <h6 className="d-flex align-items-center justify-content-between">
+                  <h5 className="d-flex align-items-center justify-content-between">
                     Total: <span>${totalAmount}</span>
-                  </h6>
+                  </h5>
                 </div>
               </div>
             </Col>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import logo from '../../assets/images/res-logo.png';
+
 import '../../styles/footer.css';
 
 import { Link } from 'react-router-dom';
@@ -20,6 +21,7 @@ const Footer = () => {
               </p>
             </div>
           </Col>
+
           <Col lg="3" md="4" sm="6">
             <h5 className="footer__title">Delivery Time</h5>
             <ListGroup className="deliver__time-list">
@@ -34,6 +36,7 @@ const Footer = () => {
               </ListGroupItem>
             </ListGroup>
           </Col>
+
           <Col lg="3" md="4" sm="6">
             <h5 className="footer__title">Contact</h5>
             <ListGroup className="deliver__time-list">
@@ -49,6 +52,7 @@ const Footer = () => {
               </ListGroupItem>
             </ListGroup>
           </Col>
+
           <Col lg="3" md="4" sm="6">
             <h5 className="footer__title">NewsLetter</h5>
             <p>Subscribe our newsletter</p>
@@ -63,33 +67,36 @@ const Footer = () => {
 
         <Row className="mt-5">
           <Col lg="6" md="6">
-            <p className="copyright__text">
-              Copyright - 2022, website made by Muhibur Rahman. All Rights Reserved.
-            </p>
+            <p className="copyright__text"></p>
           </Col>
           <Col lg="6" md="6">
             <div className="social__links d-flex align-items-center gap-4 justify-content-end">
-              <p clasName="m-0">Follow:</p>
+              <p clasName="m-0">Follow: </p>
               <span>
+                {' '}
                 <Link to="https://www.facebook.com/muhib160">
                   <i class="ri-facebook-line"></i>
-                </Link>
-                <i class="ri-send-plane-line"></i>
+                </Link>{' '}
               </span>
+
               <span>
                 <Link to="https://github.com/muhib160">
                   <i class="ri-github-line"></i>
                 </Link>
               </span>
+
               <span>
+                {' '}
                 <Link to="https://www.youtube.com/c/MuhibsTechDiary">
                   <i class="ri-youtube-line"></i>
-                </Link>
+                </Link>{' '}
               </span>
+
               <span>
+                {' '}
                 <Link to="https://www.linkedin.com/in/muhib160/">
                   <i class="ri-linkedin-line"></i>
-                </Link>
+                </Link>{' '}
               </span>
             </div>
           </Col>

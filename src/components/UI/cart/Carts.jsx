@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { ListGroup } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
@@ -39,11 +40,14 @@ const Carts = () => {
             Subtotal : <span>${totalAmount}</span>
           </h6>
           <button>
-            <Link to="/checkout">Checkout</Link>
+            <Link to="/checkout" onClick={toggleCart}>
+              Checkout
+            </Link>
           </button>
         </div>
       </ListGroup>
     </div>
   );
 };
+
 export default Carts;

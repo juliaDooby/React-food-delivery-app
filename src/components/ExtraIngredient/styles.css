@@ -1,11 +1,11 @@
-.extraIngredient{
-    border: 1px solid black;
-    display: flex;
-    height: 3rem;
-    align-items: center;
-    padding: 0 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: 20rem;
+.extraIngredient {
+  border: 1px solid black;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 20rem;
 }
 
 /* The container */
@@ -48,7 +48,7 @@
 }
 
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }

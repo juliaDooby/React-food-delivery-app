@@ -7,7 +7,6 @@
 .logo {
   text-align: center;
 }
-
 .logo img {
   width: calc(100% - 60%);
   object-fit: contain;
@@ -58,7 +57,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -80,11 +79,9 @@
 }
 
 @media only screen and (max-width: 992px) {
-
   .logo img {
     width: calc(100% - 70%);
   }
-
   .logo h5 {
     font-size: 0.8rem;
     margin-top: -15px;
@@ -109,8 +106,8 @@
     height: 100%;
     background: #fff;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     z-index: 100;
     line-height: 20px;
   }
@@ -144,7 +141,6 @@
   .logo img {
     margin-top: -70px !important;
   }
-
   .logo h5 {
     margin-top: -55px;
   }

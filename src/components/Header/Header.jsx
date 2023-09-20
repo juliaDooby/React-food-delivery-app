@@ -34,9 +34,11 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const toggleMenu = () => menuRef.current.classList.toggle('show__menu');
+
   const toggleCart = () => {
     dispatch(cartUiActions.toggle());
   };
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -57,6 +59,7 @@ const Header = () => {
             <img src={logo} alt="logo" />
             <h5>Tasty Treat</h5>
           </div>
+
           {/* ══════════ menu ══════════ */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5">
@@ -71,17 +74,20 @@ const Header = () => {
               ))}
             </div>
           </div>
+
           {/* ══════════ nav right icons ══════════ */}
           <div className="nav__right d-flex align-items-center gap-4">
             <span className="cart__icon" onClick={toggleCart}>
               <i class="ri-shopping-basket-line"></i>
               <span className="cart__badge">{totalQuantity}</span>
             </span>
+
             <span className="user">
               <Link to="/login">
                 <i class="ri-user-line"></i>
               </Link>
             </span>
+
             <span className="mobile__menu" onClick={toggleMenu}>
               <i class="ri-menu-line"></i>
             </span>

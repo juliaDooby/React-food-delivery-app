@@ -34,7 +34,6 @@
 .delivery__time-item p {
   color: #212245;
 }
-
 .footer__title {
   font-size: 1.1rem;
   color: #212245;
@@ -50,7 +49,6 @@
   align-items: center;
   cursor: pointer;
 }
-
 .newsletter input {
   background: transparent;
   border: none;
@@ -83,7 +81,7 @@
 }
 
 .copyright__text {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #df2020;
 }
 
@@ -92,7 +90,6 @@
     padding: 7px;
     font-size: 0.7rem;
   }
-
   .newsletter span {
     padding: 4px 20px;
     font-size: 0.7rem;
@@ -119,10 +116,6 @@
     text-align: center;
   }
 
-  .social__links {
-    justify-content: center;
-  }
-
   .social__links p {
     font-size: 0.8rem;
   }
@@ -130,7 +123,6 @@
   .social__links span {
     padding: 4px;
   }
-
   .social__links span a {
     font-size: 0.7rem;
   }

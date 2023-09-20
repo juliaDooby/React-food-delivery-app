@@ -16,39 +16,39 @@ const TestimonialSlider = () => {
     autoplaySpeed: 3000,
     swipeToSlide: true,
     slidesToShow: 1,
-    slidesToSctoll: 1,
+    slidesToScroll: 1,
   };
   return (
     <Slider {...settings}>
       <div>
         <p className="review__text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. A necessitatibus qui officiis
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A necessitatibus qui officiis
           quas nesciunt velit rerum incidunt explicabo similique ducimus quisquam beatae quo odit
-          aut atque, doloremque ab eius culpa?
+          aut atque, doloremque ab eius culpa!"
         </p>
-        <div>
+        <div className="slider__content d-flex align-items-center gap-3">
           <img src={ava01} alt="avatar" className="rounded" />
           <h6>John Doe</h6>
         </div>
       </div>
-      <div clasName=" slider__content d-flex align-items-center gap-3">
+      <div>
         <p className="review__text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. A necessitatibus qui officiis
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A necessitatibus qui officiis
           quas nesciunt velit rerum incidunt explicabo similique ducimus quisquam beatae quo odit
-          aut atque, doloremque ab eius culpa?
+          aut atque, doloremque ab eius culpa!"
         </p>
-        <div>
+        <div className="slider__content d-flex align-items-center gap-3">
           <img src={ava02} alt="avatar" className="rounded" />
           <h6>Mitchell Marsh</h6>
         </div>
       </div>
-      <div clasName="slider__content d-flex align-items-center gap-3">
+      <div>
         <p className="review__text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. A necessitatibus qui officiis
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A necessitatibus qui officiis
           quas nesciunt velit rerum incidunt explicabo similique ducimus quisquam beatae quo odit
-          aut atque, doloremque ab eius culpa?
+          aut atque, doloremque ab eius culpa!"
         </p>
-        <div clasName="slider__content d-flex align-items-center gap-3">
+        <div className="slider__content d-flex align-items-center gap-3">
           <img src={ava03} alt="avatar" className="rounded" />
           <h6>Steven Crock</h6>
         </div>
