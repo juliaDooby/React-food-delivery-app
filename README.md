@@ -2,10 +2,13 @@
 
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot1.JPG" width="100%" height="20%"></img></div>
 ---
+
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot2.JPG" width="100%" height="20%"></img></div>
 ---
+
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot3.JPG" width="100%" height="20%"></img></div>
 ---
+
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot4.JPG" width="100%" height="20%"></img></div>
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot5.JPG" width="100%" height="20%"></img></div>
 
