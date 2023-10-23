@@ -9,7 +9,7 @@
  [demo](https://juliadooby.github.io/React-food-delivery-app/)
  ---
 
- ### Please note: project code on master branch ((temporarily) 
+<!-- ### Please note: project code on master branch ((temporarily) -->
 <!-- ### - I'll resolve the issue soon, Thanks for understanding ! -->
 ---
 
