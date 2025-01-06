@@ -10,13 +10,14 @@
 ![Javascript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=react&logoColor=%23F7DF1E)
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 
+ <a href="https://juliadooby.github.io/React-food-delivery-app/"><strong>➥Demo</strong></a>
+
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot1.JPG" width="100%" height="20%"></img></div>
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot2.JPG" width="100%" height="20%"></img></div>
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot3.JPG" width="100%" height="20%"></img></div>
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot4.JPG" width="100%" height="20%"></img></div>
 <div align="center"><img src="https://github.com/juliaDooby/React-food-delivery-app/blob/main/FoodDeliveryShot5.JPG" width="100%" height="20%"></img></div>
 
- [demo](https://juliadooby.github.io/React-food-delivery-app/)
  ---
  
 ### Features:
